@@ -31,7 +31,7 @@ export default async (req, res) => {
           },
           subject: {
             name: 'Alice Doe',
-            email: 'alice@dock.io',
+            email: 'alice@pax8.com',
             course: 'The Best Web Training',
           },
         },

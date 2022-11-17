@@ -14,18 +14,18 @@ export default function ObtainEmployeeID() {
   const [step, setStep] = useState(0);
   const credentialSteps = [
     {
-      title: 'Acme Inc Employee ID',
+      title: 'Intuit Reseller',
       description: (
         <>
-          You are an employee of Acme Inc and are requestng a digital Employee ID.
+          You have been approved as an Intuit Reseller.
           <br />
-          You can use this credential to authorize yourself with the portal services.
+          You can use this credential to make purchases at Intuit on behalf of PAX8.
         </>
       ),
       nextBtn: true,
     },
     {
-      title: 'Acme Inc Employee ID',
+      title: 'Intuit Reseller',
       description: (
         <>
           Scan the QR code below or click the deep link if you are on a mobile device to obtain your

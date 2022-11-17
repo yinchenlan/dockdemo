@@ -12,8 +12,8 @@ const issuerDID = process.env.DOCK_API_DID;
 const credentialTypes = {
   employeeId({ subjectName, subjectEmail }) {
     return {
-      name: 'Acme Employee ID',
-      type: ['VerifiableCredential', 'EmployeeIDCredential'],
+      name: 'Intuit Reseller',
+      type: ['VerifiableCredential'],
       issuer: issuerDID,
       subject: {
         name: subjectName,
@@ -24,7 +24,7 @@ const credentialTypes = {
   },
   proofOfEmployment({ name, email, employeeId }) {
     return {
-      name: 'Acme Proof of Employment',
+      name: 'PAX8 Proof of Employment',
       type: ['VerifiableCredential', 'ProofOfEmploymentCredential'],
       issuer: issuerDID,
       subject: {
@@ -42,7 +42,7 @@ export default async (req, res) => {
     return;
   }
 
-  const { subjectName = 'Alice Doe', subjectEmail = 'alice@dock.io' } = req.body || {};
+  const { subjectName = 'Alice Doe', subjectEmail = 'alice@pax8.com' } = req.body || {};
 
   const proofId = req.query.proofId;
   const type = req.query.type || 'employeeId';

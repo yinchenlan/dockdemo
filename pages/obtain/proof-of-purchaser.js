@@ -22,26 +22,20 @@ export default function ObtainProofOfEmployment() {
 
   const credentialSteps = [
     {
-      title: 'Proof of Employment',
+      title: 'Verify Reseller Credential',
       description: (
         <>
-          As an employee of Acme Inc, you are entitled to receive a proof of employment credential.
-          <br />
-          You can use this credential to present to banks and credit agencies to verify your
-          employment status.
-          <br />
-          <br />
-          You are required to already have an Employee ID credential.
+          To verify that you have a Intuit Reseller Credential.
         </>
       ),
       nextBtn: true,
-      btnText: 'Obtain Proof of Employment',
+      btnText: 'Verify Reseller Credential',
     },
     {
-      title: 'Do you have an Employee ID?',
+      title: 'Do you have an Reseller Credential?',
       description: (
         <>
-          Please confirm that you have an Employee ID credential stored in your wallet before
+          Please confirm that you have an Intuit Reseller Credential stored in your wallet before
           proceeding
         </>
       ),
@@ -61,12 +55,10 @@ export default function ObtainProofOfEmployment() {
       ),
     },
     {
-      title: 'Present your Employee ID',
+      title: 'Present your Reseller Credential',
       description: (
         <>
-          Scan the QR code below to present your Employee ID credential which will be verified.
-          <br />
-          You will then you will be issued a proof of employment credential.
+          Scan the QR code below to present your Reseller credential which will be verified.
           <br />
           <br />
         </>
@@ -78,25 +70,17 @@ export default function ObtainProofOfEmployment() {
       // },
     },
     {
-      title: 'Employee ID has been verified',
+      title: 'PAX8 Reseller Credential has been verified',
       description: (
         <>
-          Employee ID has been verified successfully
-          <br />
-          Scan the QR code below to receive your Proof of Employment credential.
+          PAX8 Reseller Credential has been verified successfully
           <br />
           <br />
         </>
       ),
-      children: proof && (
-        <ObtainQRDisplay
-          value={`${SERVER_URL}/api/issue?type=proofOfEmployment&proofId=${proof.id}`}
-        />
-      ),
-      btnText: 'Got it, take me back!',
+      btnText: 'Take me back!',
       onClick: () => {
-        console.log(`${SERVER_URL}/api/issue?type=proofOfEmployment&proofId=${proof.id}`);
-        router.push('/dashboard');
+          router.push('/dashboard');
       },
     },
   ];
